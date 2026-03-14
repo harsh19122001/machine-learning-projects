@@ -1,1 +1,119 @@
+# Logistic Regression Classification with Streamlit Deployment
+
+This project demonstrates the implementation of a **Logistic Regression model for binary classification** and its deployment using **Streamlit**.
+
+The model predicts whether a user will purchase a product based on selected features.
+
+---
+
+## Project Workflow
+
+The project follows a complete machine learning workflow:
+
+1. Data preprocessing
+2. Feature scaling
+3. Model training
+4. Hyperparameter tuning
+5. Model evaluation
+6. Model deployment with Streamlit
+
+---
+
+## Libraries Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- Pickle
+
+---
+
+## Dataset Description
+
+The dataset contains the following fields:
+
+- User ID
+- Gender
+- Age
+- Estimated Salary
+- Purchased (Target Variable)
+
+Features used for training:
+
+- Age
+- Estimated Salary
+
+Target:
+
+- Purchased (0 or 1)
+
+---
+
+## Data Preprocessing
+
+- Selected Age and Estimated Salary as input features
+- Split dataset into training and testing sets (80/20)
+- Applied **StandardScaler** to normalize feature values
+
+---
+
+## Model Training
+
+A **Logistic Regression model** was trained using the training dataset.
+
+### Hyperparameter Tuning
+
+Used **GridSearchCV** to optimize model performance.
+
+Parameters tuned:
+
+- Regularization parameter `C`
+- Penalty (`L1` and `L2`)
+- Maximum iterations
+
+The best parameters were selected based on **accuracy score**.
+
+---
+
+## Model Evaluation
+
+The trained model was evaluated using:
+
+- Confusion Matrix
+- Accuracy Score
+- Precision
+- Recall
+- F1 Score
+- ROC Curve
+- ROC AUC Score
+
+The ROC curve helps visualize the performance of the classifier.
+
+---
+
+## Model Saving
+
+The trained model and scaler were saved using **pickle**:
+
+- `model.pkl`
+- `scaler.pkl`
+
+This allows the model to be reused in the Streamlit application.
+
+---
+
+## Streamlit Web Application
+
+A Streamlit app was built to interact with the trained model.
+
+### Features
+
+- Upload CSV file for prediction
+- Generate predictions automatically
+- View predicted results
+- Download prediction output
+- Visualize ROC curve
 
