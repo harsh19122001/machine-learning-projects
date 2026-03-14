@@ -1,1 +1,113 @@
+# Customer Purchase Prediction using Support Vector Machine (SVM)
 
+This project demonstrates how to build a **Support Vector Machine (SVM) classification model** and deploy it using **Streamlit** to predict whether a customer will purchase a product.
+
+The project covers the complete machine learning workflow including preprocessing, hyperparameter tuning, model evaluation, and deployment.
+
+---
+
+## Technologies & Libraries Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- Pickle
+
+---
+
+## Dataset Description
+
+The dataset contains customer information with the following columns:
+
+- User ID
+- Gender
+- Age
+- Estimated Salary
+- Purchased (Target Variable)
+
+Features used for model training:
+
+- Age
+- Estimated Salary
+
+Target variable:
+
+- Purchased (0 = No, 1 = Yes)
+
+---
+
+## Project Workflow
+
+### 1. Data Loading
+The dataset is loaded using Pandas and split into features (X) and target variable (y).
+
+### 2. Train-Test Split
+The dataset is divided into:
+
+- 80% training data
+- 20% testing data
+
+This helps evaluate the model on unseen data.
+
+---
+
+### 3. Feature Scaling
+
+StandardScaler is applied to normalize the feature values so that SVM performs effectively.
+
+---
+
+### 4. Hyperparameter Tuning
+
+GridSearchCV is used to find the best model configuration.
+
+Parameters tuned:
+
+- C (regularization parameter)
+- Kernel (linear, rbf, polynomial)
+- Gamma (scale, auto)
+
+The best combination of parameters is selected based on accuracy.
+
+---
+
+### 5. Model Evaluation
+
+The trained model is evaluated using multiple metrics:
+
+- Confusion Matrix
+- Accuracy Score
+- Precision
+- Recall
+- F1-score
+- ROC Curve
+- ROC-AUC Score
+
+These metrics help measure classification performance.
+
+---
+
+### 6. Model Saving
+
+The trained model and scaler are saved using **pickle**:
+
+- svm_model.pkl
+- scaler.pkl
+
+This allows the model to be reused in the deployment application.
+
+---
+
+## Streamlit Application
+
+An interactive Streamlit web app is built to make predictions using the trained SVM model.
+
+### Features
+
+- Upload CSV or Excel dataset
+- Automatic prediction generation
+- Display prediction results
+- ROC curve visualization (if target column exists)
