@@ -1,1 +1,142 @@
+# Customer Purchase Prediction using K-Nearest Neighbors (KNN)
 
+This project demonstrates how to build a **K-Nearest Neighbors (KNN) classification model** and deploy it using **Streamlit** to predict whether a customer will purchase a product.
+
+The project follows a complete machine learning workflow including data preprocessing, model training, evaluation, and deployment.
+
+---
+
+## Technologies & Libraries Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- Pickle
+
+---
+
+## Dataset Description
+
+The dataset contains customer information with the following columns:
+
+- User ID
+- Gender
+- Age
+- Estimated Salary
+- Purchased (Target Variable)
+
+Features used for training:
+
+- Age
+- Estimated Salary
+
+Target variable:
+
+- Purchased (0 = No, 1 = Yes)
+
+---
+
+## Project Workflow
+
+### 1. Data Loading
+
+The dataset is loaded using Pandas and split into features (X) and target variable (y).
+
+---
+
+### 2. Train-Test Split
+
+The dataset is divided into:
+
+- 80% training data
+- 20% testing data
+
+This helps evaluate the model on unseen data.
+
+---
+
+### 3. Feature Scaling
+
+StandardScaler is applied to normalize feature values so that distance calculations used by KNN are not biased.
+
+---
+
+### 4. Model Training
+
+A **K-Nearest Neighbors classifier** is trained with the following parameters:
+
+- n_neighbors = 5
+- weights = distance
+- p = 2 (Euclidean distance)
+
+The model learns patterns from the training dataset.
+
+---
+
+### 5. Model Evaluation
+
+The trained model is evaluated using multiple metrics:
+
+- Confusion Matrix
+- Accuracy Score
+- Precision
+- Recall
+- F1-score
+- ROC Curve
+- ROC-AUC Score
+
+The ROC curve helps visualize the classification performance.
+
+---
+
+### 6. Model Saving
+
+The trained model and scaler are saved using **pickle**:
+
+- knn_model.pkl
+- scaler.pkl
+
+This allows the model to be reused in the deployment application.
+
+---
+
+## Streamlit Application
+
+An interactive Streamlit web app is created to allow users to make predictions.
+
+### Features
+
+- Upload CSV dataset
+- Generate predictions automatically
+- View prediction results
+- ROC curve visualization
+- Download predicted results
+
+---
+
+## Project Structure
+
+knn-classification-streamlit-app/
+│
+├── knn_model.pkl
+├── scaler.pkl
+├── backend_training.py
+├── app.py
+├── dataset/
+│   └── logit_classification.csv
+└── README.md
+
+---
+
+## What I Learned
+
+- K-Nearest Neighbors classification algorithm
+- Importance of feature scaling
+- Model evaluation using ROC-AUC and classification metrics
+- Deploying machine learning models with Streamlit
+- Building interactive prediction apps
+
+---
