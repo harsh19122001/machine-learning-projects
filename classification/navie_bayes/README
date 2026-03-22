@@ -1,1 +1,78 @@
+🤖 Naive Bayes Classification (Gaussian, Bernoulli, Multinomial)
 
+This project demonstrates the implementation of Naive Bayes classification algorithms using Python.
+
+The objective is to understand how different Naive Bayes variants perform under different preprocessing conditions.
+
+🛠️ Libraries Used
+Python
+NumPy
+Pandas
+Scikit-learn
+📂 Dataset Description
+
+The dataset contains:
+
+Age
+Estimated Salary
+Purchased (Target Variable)
+
+Features used:
+
+Age
+Estimated Salary
+
+Target:
+
+Purchased (0 or 1)
+🔍 Project Workflow
+1️⃣ Data Loading & Preparation
+Loaded dataset using Pandas
+Selected features (Age, Salary) as X
+Selected Purchased as y
+Split dataset into 80% training and 20% testing
+🤖 Models Implemented
+🔹 1. Gaussian Naive Bayes
+No feature scaling required
+Suitable for continuous data
+
+Results:
+
+Accuracy ≈ 92.5%
+
+Confusion Matrix:
+
+[[56  2]
+ [ 4 18]]
+🔹 2. Bernoulli Naive Bayes
+Applied StandardScaler
+Converted features into binary format
+
+Results:
+
+Evaluated using accuracy and confusion matrix
+🔹 3. Multinomial Naive Bayes
+Applied MinMaxScaler to ensure all values are positive
+Suitable for count-based or positive data
+
+Results:
+
+Accuracy ≈ 72.5%
+
+Confusion Matrix:
+
+[[58  0]
+ [22  0]]
+📊 Model Evaluation
+
+Each model was evaluated using:
+
+Accuracy Score
+Confusion Matrix
+🎯 What I Learned
+Differences between Gaussian, Bernoulli, and Multinomial Naive Bayes
+Importance of choosing the correct model based on data type
+Role of preprocessing in improving model performance
+How Naive Bayes assumes feature independence
+
+This project helped strengthen my understanding of probability-based classification algorithms.
