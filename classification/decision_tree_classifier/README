@@ -1,1 +1,104 @@
+# Decision Tree Classification with Hyperparameter Tuning
+
+This project demonstrates the implementation of a **Decision Tree Classifier** for predicting customer purchase behavior.
+
+The project focuses on improving model performance using **hyperparameter tuning** and evaluating it using different metrics.
+
+---
+
+## 🛠️ Libraries Used
+
+- Python  
+- NumPy  
+- Pandas  
+- Matplotlib  
+- Scikit-learn  
+
+---
+
+## 📂 Dataset Description
+
+The dataset contains:
+
+- Age  
+- Estimated Salary  
+- Purchased (Target Variable)  
+
+Features used:
+- Age  
+- Estimated Salary  
+
+Target:
+- Purchased (0 or 1)
+
+---
+
+## 🔍 Project Workflow
+
+### 1️⃣ Data Loading & Preparation
+- Loaded dataset using Pandas  
+- Selected features (Age, Salary) as **X**  
+- Selected Purchased as **y**  
+- Split dataset into **80% training and 20% testing**  
+
+---
+
+### 2️⃣ Hyperparameter Tuning
+
+Used **GridSearchCV** to optimize the Decision Tree model.
+
+Parameters tuned:
+
+- criterion: gini, entropy  
+- max_depth: 2 to 7  
+- min_samples_split: 2, 5, 10  
+- min_samples_leaf: 1, 2, 4  
+
+The best parameters were selected based on accuracy.
+
+---
+
+### 3️⃣ Model Training
+
+- Trained Decision Tree Classifier using optimized parameters  
+- Generated predictions on test data  
+
+---
+
+### 4️⃣ Model Evaluation
+
+The model was evaluated using:
+
+- Accuracy Score  
+- Confusion Matrix  
+- ROC Curve  
+- ROC-AUC Score  
+
+These metrics help measure classification performance.
+
+---
+
+### 5️⃣ Visualization
+
+- Plotted ROC Curve  
+- Compared model performance using AUC score  
+
+---
+
+## 📊 Results
+
+- Achieved good classification accuracy  
+- ROC-AUC score indicates strong model performance  
+
+---
+
+## 🎯 What I Learned
+
+- How Decision Tree classification works  
+- Importance of hyperparameter tuning  
+- How to control overfitting using tree depth  
+- How to evaluate classification models using ROC-AUC  
+- Importance of model selection and optimization  
+
+This project helped me build a strong understanding of **tree-based machine learning models**.
 
